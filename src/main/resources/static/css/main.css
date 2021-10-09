@@ -1,0 +1,18 @@
+.controller > .col{
+    align-self: center;
+}
+.item{
+    background-color: rebeccapurple;
+    position: relative;
+    color: azure;
+    text-align: center;
+    font-size: 25px;
+}
+.item > span{
+    position: absolute;
+    top: -30px;
+    right: 50%;
+}
+#rangeLabel::after{
+    content: attr(data-content);
+}
