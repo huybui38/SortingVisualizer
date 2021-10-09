@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/stomp.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
-    <title>Hello, world!</title>
+    <title>Sorting Visualizer!</title>
   </head>
   <body>
     <div class="container">
-    <h1>Hello, world asd!</h1>
 
             <div class="controller row">
                 <div class="col">
-                    <select class="form-select" aria-label="Default select example" id="sortType">
-                        <option selected value="-1">Chọn thuật toán</option>
+                    <select class="form-select" aria-label="Choose algorithm:" id="sortType">
+                        <option selected value="-1">Choose algorithm:</option>
                         <option value="1">Selection sort</option>
                         <option value="2">Bubble sort</option>
                         <option value="6">Optimized Bubble sort</option>
@@ -30,13 +29,12 @@
                 </div>
                 <div class="col" >
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Số lượng phần tử:</span>
+                        <span class="input-group-text" id="basic-addon1">Size:</span>
                         <input type="text" class="form-control"  aria-describedby="basic-addon1" value="0" id="txtCount">
                       </div>
-                    <!-- <label for="customRange1" class="form-label" id="rangeLabel" data-content="0">Số lượng phần tử:</label> -->
                     <input type="range" class="form-range" id="countRange" min="2" max="150" >
                 </div>
-                <div class="col-3">
+                <div class="col">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Delay</span>
                       <input type="number" class="form-control" id="txtDelay" aria-describedby="basic-addon3" value="0">

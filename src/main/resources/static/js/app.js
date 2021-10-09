@@ -91,7 +91,7 @@ function generateRandomData(){
 }
 function generateSpecialData(){
     if ($("#txtCount").val() <= 3){
-        alert("Ít nhất 4 phần tử!");
+        alert("Size must be at least 4!");
         return;
     }
     let data = generateSpecialList($("#txtCount").val());
@@ -119,7 +119,7 @@ async function handleSort(){
    
     // window.timeout = 0;
     if (sortType == -1)
-        return alert("Chọn thuật toán!");
+        return alert("Choose at least one algorithm!");
     if (window.data == null){
         generateRandomData($("#txtCount").val());
     }
@@ -171,15 +171,15 @@ stompClient.connect({}, function (frame) {
     });
     stompClient.subscribe('/callback/end', async function () {
         while (queue.length !== 0){
-            let firstObj = queue.shift();
-            if (firstObj.obj.type &&firstObj.obj.type == 'bg'){
-                let {id, color} = firstObj.obj;
-                await firstObj.func(id, color);
-            }else if (firstObj.obj.type &&firstObj.obj.type == 'render'){
-                let {data} = firstObj.obj; 
-                await firstObj.func(data);
+            let funcObj = queue.shift();
+            if (funcObj.obj.type &&funcObj.obj.type == 'bg'){
+                let {id, color} = funcObj.obj;
+                await funcObj.func(id, color);
+            }else if (funcObj.obj.type &&funcObj.obj.type == 'render'){
+                let {data} = funcObj.obj;
+                await funcObj.func(data);
             }
-            else await firstObj.func(firstObj.obj.first, firstObj.obj.second);
+            else await funcObj.func(funcObj.obj.first, funcObj.obj.second);
         }
     });
 });

@@ -1,5 +1,6 @@
 .controller > .col{
     align-self: center;
+    padding-top: 30px;
 }
 .item{
     background-color: rebeccapurple;
