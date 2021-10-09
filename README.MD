@@ -1,5 +1,6 @@
 # SortingVisualizer
 Simple visualizer for basic sorting algorithms.
+![img.png](img.png)
 ## Technologies
 - Java 8
 - Spring
