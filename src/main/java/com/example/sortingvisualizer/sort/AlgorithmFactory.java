@@ -27,6 +27,8 @@ public class AlgorithmFactory {
                 return new MergeSort(this.template);
             case 6:
                 return new OptimizedBubbleSort(this.template);
+            case 7:
+                return new HeapSort(this.template);
         }
         return null;
     }
