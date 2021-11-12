@@ -13,3 +13,4 @@ Simple visualizer for basic sorting algorithms.
 - Insertion sort
 - Quick sort
 - Merge sort
+- Heap sort
